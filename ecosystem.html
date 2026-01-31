@@ -149,7 +149,7 @@
         margin-bottom: 1.5rem;
       }
 
-            .dapp-features {
+      .dapp-features {
         margin-bottom: 2rem;
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -290,13 +290,13 @@
         }
       }
 
-            @media screen and (max-width: 767px) {
+      @media screen and (max-width: 767px) {
         .dapp-features {
           grid-template-columns: 1fr;
         }
       }
 
-@media screen and (max-width: 479px) {
+      @media screen and (max-width: 479px) {
         .ecosystem-hero {
           min-height: auto;
           padding-top: 6rem;
@@ -377,11 +377,9 @@
               class="navbar_text-link w-nav-link w--current"
               >Ecosystem</a
             >
-            <a 
-              href="/index.html#join-gang"
-              class="navbar_text-link w-nav-link"
-              >Join gang </a
-            >  
+            <a href="/index.html#join-gang" class="navbar_text-link w-nav-link"
+              >Join gang
+            </a>
             <a
               href="https://docs.gorbagana.wtf/"
               target="_blank"
@@ -397,14 +395,22 @@
         <div class="ecosystem-hero">
           <div class="padding-global">
             <div class="ecosystem-hero_content">
-              <p class="overline text-align-center">Dapps for the Trash Gang</p>
               <h1 class="h1 text-align-center">
                 Gorbage Dapps for the Trash Gang
               </h1>
               <p class="ecosystem-intro">
                 Feeling lost in the landfill with no clue how to utilize your
                 <span class="highlight-text">$GOR</span>? Don't worry we got you
-                covered...<br /><br />
+                covered...<br />
+                Bridge your<span class="highlight-text"> sGOR </span>to
+                <span class="highlight-text">gGOR</span> through the one way
+                bridge at
+                <a
+                  class="highlight-text"
+                  target="_blank"
+                  href="https://bridge.trashscan.io/"
+                  >https://bridge.trashscan.io/</a
+                ><br /><br />
                 Dumpster dive (literally) into our list of curated Dapps where
                 you can unload your $GOR and familiarize yourself with the
                 ecosystem.
@@ -420,64 +426,70 @@
             <div class="dapp-card" data-dapp="1">
               <span class="dapp-number">01</span>
               <div class="dapp-image-wrapper">
-                <img src="images/bang.png" alt="Bang" class="dapp-image" loading="lazy" />
+                <img
+                  src="images/bang.png"
+                  alt="Bang"
+                  class="dapp-image"
+                  loading="lazy"
+                />
               </div>
               <div class="dapp-content">
                 <div class="dapp-header">
                   <div>
                     <h2 class="dapp-title">Bang</h2>
-                  <p class="dapp-tagline">Own a piece of the money machine</p>
+                    <p class="dapp-tagline">Own a piece of the money machine</p>
+                  </div>
                 </div>
-              </div>
-              <p class="dapp-description">
-                What if you could own a piece of a Pump.fun-style money machine
-                without dumping on your friends? Bang lets you profit ethically
-                with <span class="highlight-text">100% fair launch</span> - no
-                investors, no team allocation, no insiders.
-              </p>
-              <div class="dapp-features">
-                <p class="dapp-feature">
-                  <span class="highlight-text">100% revenue</span> flows to
-                  $BANG stakers after the last token is mined
+                <p class="dapp-description">
+                  What if you could own a piece of a Pump.fun-style money
+                  machine without dumping on your friends? Bang lets you profit
+                  ethically with
+                  <span class="highlight-text">100% fair launch</span> - no
+                  investors, no team allocation, no insiders.
                 </p>
-                <p class="dapp-feature">
-                  <span class="highlight-text">Royalty tokens</span> - earn fees
-                  on every transfer without dumping on your community
-                </p>
-                <p class="dapp-feature">
-                  Create a banger (raises 1M GOR) and earn
-                  <span class="highlight-text">100,000 GOR</span> bonus
-                </p>
-                <p class="dapp-feature">
-                  Trade to mine $BANG - 10 GOR volume = 1 BANG, distributed
-                  weekly
-                </p>
-                <p class="dapp-feature">
-                  <span class="highlight-text">One-way staking</span> - tokens
-                  burned forever, circulating supply only goes down
-                </p>
-                <p class="dapp-feature">
-                  Tiered algorithm ensures every token gets featured on the main
-                  page
-                </p>
-              </div>
-              <div class="dapp-links">
-                <a
-                  href="https://bang.meme/"
-                  target="_blank"
-                  class="dapp-link"
-                >
-                  <span class="dapp-link-text">VISIT SITE</span>
-                  <img src="images/arrow_outward.svg" alt="" />
-                </a>
-                <a
-                  href="https://x.com/fairdevs"
-                  target="_blank"
-                  class="dapp-link dapp-social"
-                >
-                  <span class="dapp-link-text">@FAIRDEVS</span>
-                </a>
-              </div>
+                <div class="dapp-features">
+                  <p class="dapp-feature">
+                    <span class="highlight-text">100% revenue</span> flows to
+                    $BANG stakers after the last token is mined
+                  </p>
+                  <p class="dapp-feature">
+                    <span class="highlight-text">Royalty tokens</span> - earn
+                    fees on every transfer without dumping on your community
+                  </p>
+                  <p class="dapp-feature">
+                    Create a banger (raises 1M GOR) and earn
+                    <span class="highlight-text">100,000 GOR</span> bonus
+                  </p>
+                  <p class="dapp-feature">
+                    Trade to mine $BANG - 10 GOR volume = 1 BANG, distributed
+                    weekly
+                  </p>
+                  <p class="dapp-feature">
+                    <span class="highlight-text">One-way staking</span> - tokens
+                    burned forever, circulating supply only goes down
+                  </p>
+                  <p class="dapp-feature">
+                    Tiered algorithm ensures every token gets featured on the
+                    main page
+                  </p>
+                </div>
+                <div class="dapp-links">
+                  <a
+                    href="https://bang.meme/"
+                    target="_blank"
+                    class="dapp-link"
+                  >
+                    <span class="dapp-link-text">VISIT SITE</span>
+                    <img src="images/arrow_outward.svg" alt="" />
+                  </a>
+                  <a
+                    href="https://x.com/fairdevs"
+                    target="_blank"
+                    class="dapp-link dapp-social"
+                  >
+                    <span class="dapp-link-text">@FAIRDEVS</span>
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -485,47 +497,52 @@
             <div class="dapp-card" data-dapp="2">
               <span class="dapp-number">02</span>
               <div class="dapp-image-wrapper">
-                <img src="images/trash_wall.png" alt="Trash Talk" class="dapp-image" loading="lazy" />
+                <img
+                  src="images/trash_wall.png"
+                  alt="Trash Talk"
+                  class="dapp-image"
+                  loading="lazy"
+                />
               </div>
               <div class="dapp-content">
                 <div class="dapp-header">
                   <div>
                     <h2 class="dapp-title">Trash Talk</h2>
-                  <p class="dapp-tagline">Unleash your god-awful thoughts</p>
+                    <p class="dapp-tagline">Unleash your god-awful thoughts</p>
+                  </div>
                 </div>
-              </div>
-              <p class="dapp-description">
-                Post your trash for everyone to see on the
-                <span class="highlight-text">'Wall of Trash'</span>. Pay a small
-                fee in $GOR to make your thoughts forever visible.
-              </p>
-              <div class="dapp-features">
-                <p class="dapp-feature">
-                  Pay a small fee in $GOR to post your trash
+                <p class="dapp-description">
+                  Post your trash for everyone to see on the
+                  <span class="highlight-text">'Wall of Trash'</span>. Pay a
+                  small fee in $GOR to make your thoughts forever visible.
                 </p>
-                <p class="dapp-feature">
-                  Talk enough trash to earn a spot on the 'Trash Talkers'
-                  Leaderboard
-                </p>
-                <p class="dapp-feature">Forever visible on the blockchain</p>
-              </div>
-              <div class="dapp-links">
-                <a
-                  href="https://www.trashtalk.zone/"
-                  target="_blank"
-                  class="dapp-link"
-                >
-                  <span class="dapp-link-text">VISIT SITE</span>
-                  <img src="images/arrow_outward.svg" alt="" />
-                </a>
-                <a
-                  href="https://x.com/trashtalkgor"
-                  target="_blank"
-                  class="dapp-link dapp-social"
-                >
-                  <span class="dapp-link-text">@TRASHTALKGOR</span>
-                </a>
-              </div>
+                <div class="dapp-features">
+                  <p class="dapp-feature">
+                    Pay a small fee in $GOR to post your trash
+                  </p>
+                  <p class="dapp-feature">
+                    Talk enough trash to earn a spot on the 'Trash Talkers'
+                    Leaderboard
+                  </p>
+                  <p class="dapp-feature">Forever visible on the blockchain</p>
+                </div>
+                <div class="dapp-links">
+                  <a
+                    href="https://www.trashtalk.zone/"
+                    target="_blank"
+                    class="dapp-link"
+                  >
+                    <span class="dapp-link-text">VISIT SITE</span>
+                    <img src="images/arrow_outward.svg" alt="" />
+                  </a>
+                  <a
+                    href="https://x.com/trashtalkgor"
+                    target="_blank"
+                    class="dapp-link dapp-social"
+                  >
+                    <span class="dapp-link-text">@TRASHTALKGOR</span>
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -533,56 +550,62 @@
             <div class="dapp-card" data-dapp="3">
               <span class="dapp-number">03</span>
               <div class="dapp-image-wrapper">
-                <img src="images/trashbin.png" alt="Trash Bin" class="dapp-image" loading="lazy" />
+                <img
+                  src="images/trashbin.png"
+                  alt="Trash Bin"
+                  class="dapp-image"
+                  loading="lazy"
+                />
               </div>
               <div class="dapp-content">
                 <div class="dapp-header">
                   <div>
                     <h2 class="dapp-title">Trash Bin</h2>
-                  <p class="dapp-tagline">Gorb's very own trashy DEX</p>
+                    <p class="dapp-tagline">Gorb's very own trashy DEX</p>
+                  </div>
                 </div>
-              </div>
-              <p class="dapp-description">
-                Swap trash, get trash. Apart from your standard CPAMM, delve
-                into junk-fueled market makers.
-              </p>
-              <div class="dapp-features">
-                <p class="dapp-feature">
-                  <span class="highlight-text">SAMM</span> (Stink Ass Market
-                  Maker) - Similar to CLMM; More degen trades, more trashy pools
+                <p class="dapp-description">
+                  Swap trash, get trash. Apart from your standard CPAMM, delve
+                  into junk-fueled market makers.
                 </p>
-                <p class="dapp-feature">
-                  <span class="highlight-text">TRAP</span> (Trash Swap) -
-                  Fetches all pools and routes trades for best price with lowest
-                  risk
-                </p>
-                <p class="dapp-feature">
-                  <span class="highlight-text">TrashBin Station</span> - Token
-                  management room (checkout Degen Mode if you're a true dumpster
-                  diver)
-                </p>
-                <p class="dapp-feature">
-                  <span class="highlight-text">BinBoard</span> - All trashy
-                  tokens ranked by TVL + MCAP with liquidity-adjusted checks
-                </p>
-              </div>
-              <div class="dapp-links">
-                <a
-                  href="https://trashbin.fun/"
-                  target="_blank"
-                  class="dapp-link"
-                >
-                  <span class="dapp-link-text">VISIT SITE</span>
-                  <img src="images/arrow_outward.svg" alt="" />
-                </a>
-                <a
-                  href="https://x.com/TrashBinGOR"
-                  target="_blank"
-                  class="dapp-link dapp-social"
-                >
-                  <span class="dapp-link-text">@TRASHBINGOR</span>
-                </a>
-              </div>
+                <div class="dapp-features">
+                  <p class="dapp-feature">
+                    <span class="highlight-text">SAMM</span> (Stink Ass Market
+                    Maker) - Similar to CLMM; More degen trades, more trashy
+                    pools
+                  </p>
+                  <p class="dapp-feature">
+                    <span class="highlight-text">TRAP</span> (Trash Swap) -
+                    Fetches all pools and routes trades for best price with
+                    lowest risk
+                  </p>
+                  <p class="dapp-feature">
+                    <span class="highlight-text">TrashBin Station</span> - Token
+                    management room (checkout Degen Mode if you're a true
+                    dumpster diver)
+                  </p>
+                  <p class="dapp-feature">
+                    <span class="highlight-text">BinBoard</span> - All trashy
+                    tokens ranked by TVL + MCAP with liquidity-adjusted checks
+                  </p>
+                </div>
+                <div class="dapp-links">
+                  <a
+                    href="https://trashbin.fun/"
+                    target="_blank"
+                    class="dapp-link"
+                  >
+                    <span class="dapp-link-text">VISIT SITE</span>
+                    <img src="images/arrow_outward.svg" alt="" />
+                  </a>
+                  <a
+                    href="https://x.com/TrashBinGOR"
+                    target="_blank"
+                    class="dapp-link dapp-social"
+                  >
+                    <span class="dapp-link-text">@TRASHBINGOR</span>
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -590,40 +613,49 @@
             <div class="dapp-card" data-dapp="4">
               <span class="dapp-number">04</span>
               <div class="dapp-image-wrapper">
-                <img src="images/gorid.png" alt="GorID" class="dapp-image" loading="lazy" />
+                <img
+                  src="images/gorid.png"
+                  alt="GorID"
+                  class="dapp-image"
+                  loading="lazy"
+                />
               </div>
               <div class="dapp-content">
                 <div class="dapp-header">
                   <div>
                     <h2 class="dapp-title">GorID</h2>
-                  <p class="dapp-tagline">Your Trash3 Identity</p>
+                    <p class="dapp-tagline">Your Trash3 Identity</p>
+                  </div>
                 </div>
-              </div>
-              <p class="dapp-description">
-                Imagine being stranded in a landfill with no name, no identity
-                and no respect. Scary right? Mint your Trash3 Identity and stand
-                out amongst the gorbage!
-              </p>
-              <div class="dapp-features">
-                <p class="dapp-feature">Mint your unique Trash3 Identity</p>
-                <p class="dapp-feature">
-                  Connect your Twitter to send/receive tips in $GOR
+                <p class="dapp-description">
+                  Imagine being stranded in a landfill with no name, no identity
+                  and no respect. Scary right? Mint your Trash3 Identity and
+                  stand out amongst the gorbage!
                 </p>
-                <p class="dapp-feature">Stand out amongst the gorbage</p>
-              </div>
-              <div class="dapp-links">
-                <a href="https://gorid.com/" target="_blank" class="dapp-link">
-                  <span class="dapp-link-text">VISIT SITE</span>
-                  <img src="images/arrow_outward.svg" alt="" />
-                </a>
-                <a
-                  href="https://x.com/goridgor"
-                  target="_blank"
-                  class="dapp-link dapp-social"
-                >
-                  <span class="dapp-link-text">@GORIDGOR</span>
-                </a>
-              </div>
+                <div class="dapp-features">
+                  <p class="dapp-feature">Mint your unique Trash3 Identity</p>
+                  <p class="dapp-feature">
+                    Connect your Twitter to send/receive tips in $GOR
+                  </p>
+                  <p class="dapp-feature">Stand out amongst the gorbage</p>
+                </div>
+                <div class="dapp-links">
+                  <a
+                    href="https://gorid.com/"
+                    target="_blank"
+                    class="dapp-link"
+                  >
+                    <span class="dapp-link-text">VISIT SITE</span>
+                    <img src="images/arrow_outward.svg" alt="" />
+                  </a>
+                  <a
+                    href="https://x.com/goridgor"
+                    target="_blank"
+                    class="dapp-link dapp-social"
+                  >
+                    <span class="dapp-link-text">@GORIDGOR</span>
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -631,40 +663,45 @@
             <div class="dapp-card" data-dapp="5">
               <span class="dapp-number">05</span>
               <div class="dapp-image-wrapper">
-                <img src="images/gorbhouse.png" alt="Gorbhouse" class="dapp-image" loading="lazy" />
+                <img
+                  src="images/gorbhouse.png"
+                  alt="Gorbhouse"
+                  class="dapp-image"
+                  loading="lazy"
+                />
               </div>
               <div class="dapp-content">
                 <div class="dapp-header">
                   <div>
                     <h2 class="dapp-title">Gorbhouse</h2>
-                  <p class="dapp-tagline">The OG memecoin on Gorb</p>
+                    <p class="dapp-tagline">The OG memecoin on Gorb</p>
+                  </div>
                 </div>
-              </div>
-              <p class="dapp-description">
-                I mean, it's just a chill gorbagana house. The OG memecoin on
-                Gorb.
-              </p>
-              <div class="dapp-features">
-                <p class="dapp-feature">The original memecoin on Gorbagana</p>
-                <p class="dapp-feature">Chill vibes, maximum trash energy</p>
-              </div>
-              <div class="dapp-links">
-                <a
-                  href="https://www.gorbhouse.wtf/"
-                  target="_blank"
-                  class="dapp-link"
-                >
-                  <span class="dapp-link-text">VISIT SITE</span>
-                  <img src="images/arrow_outward.svg" alt="" />
-                </a>
-                <a
-                  href="https://x.com/GorbhouseSOL"
-                  target="_blank"
-                  class="dapp-link dapp-social"
-                >
-                  <span class="dapp-link-text">@GORBHOUSESOL</span>
-                </a>
-              </div>
+                <p class="dapp-description">
+                  I mean, it's just a chill gorbagana house. The OG memecoin on
+                  Gorb.
+                </p>
+                <div class="dapp-features">
+                  <p class="dapp-feature">The original memecoin on Gorbagana</p>
+                  <p class="dapp-feature">Chill vibes, maximum trash energy</p>
+                </div>
+                <div class="dapp-links">
+                  <a
+                    href="https://www.gorbhouse.wtf/"
+                    target="_blank"
+                    class="dapp-link"
+                  >
+                    <span class="dapp-link-text">VISIT SITE</span>
+                    <img src="images/arrow_outward.svg" alt="" />
+                  </a>
+                  <a
+                    href="https://x.com/GorbhouseSOL"
+                    target="_blank"
+                    class="dapp-link dapp-social"
+                  >
+                    <span class="dapp-link-text">@GORBHOUSESOL</span>
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -672,57 +709,66 @@
             <div class="dapp-card" data-dapp="6">
               <span class="dapp-number">06</span>
               <div class="dapp-image-wrapper">
-                <img src="images/trashscan.png" alt="Trash Scan" class="dapp-image" loading="lazy" />
+                <img
+                  src="images/trashscan.png"
+                  alt="Trash Scan"
+                  class="dapp-image"
+                  loading="lazy"
+                />
               </div>
               <div class="dapp-content">
                 <div class="dapp-header">
                   <div>
                     <h2 class="dapp-title">Trash Scan</h2>
-                  <p class="dapp-tagline">The leading explorer for Gorbagana</p>
+                    <p class="dapp-tagline">
+                      The leading explorer for Gorbagana
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <p class="dapp-description">
-                Get the latest data for transactions, epochs, validators and top
-                $GOR holders. Home of the 'TrashDAQ' - an aggregator for gorb
-                chain.
-              </p>
-              <div class="dapp-features">
-                <p class="dapp-feature">Browse all tokens available on gorb</p>
-                <p class="dapp-feature">
-                  Bridge your sGor to gGor with seamless interface
+                <p class="dapp-description">
+                  Get the latest data for transactions, epochs, validators and
+                  top $GOR holders. Home of the 'TrashDAQ' - an aggregator for
+                  gorb chain.
                 </p>
-                <p class="dapp-feature">View all gorbagios & Mint gorigins</p>
-                <p class="dapp-feature">
-                  Check gorDrop eligibility (airdrop for holders)
-                </p>
-                <p class="dapp-feature">
-                  Track your points (1 Point for every 100 $GOR traded)
-                </p>
-                <p class="dapp-feature">
-                  Stress-test the chain with 'Break Gorbagana' mini-game
-                </p>
-                <p class="dapp-feature">
-                  <span class="highlight-text">Coming soon:</span> perps,
-                  lending/borrowing
-                </p>
-              </div>
-              <div class="dapp-links">
-                <a
-                  href="https://trashscan.io/"
-                  target="_blank"
-                  class="dapp-link"
-                >
-                  <span class="dapp-link-text">VISIT SITE</span>
-                  <img src="images/arrow_outward.svg" alt="" />
-                </a>
-                <a
-                  href="https://x.com/trashscangor"
-                  target="_blank"
-                  class="dapp-link dapp-social"
-                >
-                  <span class="dapp-link-text">@TRASHSCANGOR</span>
-                </a>
-              </div>
+                <div class="dapp-features">
+                  <p class="dapp-feature">
+                    Browse all tokens available on gorb
+                  </p>
+                  <p class="dapp-feature">
+                    Bridge your sGor to gGor with seamless interface
+                  </p>
+                  <p class="dapp-feature">View all gorbagios & Mint gorigins</p>
+                  <p class="dapp-feature">
+                    Check gorDrop eligibility (airdrop for holders)
+                  </p>
+                  <p class="dapp-feature">
+                    Track your points (1 Point for every 100 $GOR traded)
+                  </p>
+                  <p class="dapp-feature">
+                    Stress-test the chain with 'Break Gorbagana' mini-game
+                  </p>
+                  <p class="dapp-feature">
+                    <span class="highlight-text">Coming soon:</span> perps,
+                    lending/borrowing
+                  </p>
+                </div>
+                <div class="dapp-links">
+                  <a
+                    href="https://trashscan.io/"
+                    target="_blank"
+                    class="dapp-link"
+                  >
+                    <span class="dapp-link-text">VISIT SITE</span>
+                    <img src="images/arrow_outward.svg" alt="" />
+                  </a>
+                  <a
+                    href="https://x.com/trashscangor"
+                    target="_blank"
+                    class="dapp-link dapp-social"
+                  >
+                    <span class="dapp-link-text">@TRASHSCANGOR</span>
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -730,46 +776,55 @@
             <div class="dapp-card" data-dapp="7">
               <span class="dapp-number">07</span>
               <div class="dapp-image-wrapper">
-                <img src="images/gorboy.png" alt="GORBOY" class="dapp-image" loading="lazy" />
+                <img
+                  src="images/gorboy.png"
+                  alt="GORBOY"
+                  class="dapp-image"
+                  loading="lazy"
+                />
               </div>
               <div class="dapp-content">
                 <div class="dapp-header">
                   <div>
                     <h2 class="dapp-title">GORBOY</h2>
-                  <p class="dapp-tagline">Gaming ecosystem token</p>
+                    <p class="dapp-tagline">Gaming ecosystem token</p>
+                  </div>
                 </div>
-              </div>
-              <p class="dapp-description">
-                A gaming ecosystem token that combines meme culture with
-                engineered economic infrastructure. Designed as a framework
-                connecting gamers, developers, and token holders.
-              </p>
-              <div class="dapp-features">
-                <p class="dapp-feature">
-                  <span class="highlight-text">Guard Terminal (GGT)</span> -
-                  Visualize any token as energy fields (science bitch!)
+                <p class="dapp-description">
+                  A gaming ecosystem token that combines meme culture with
+                  engineered economic infrastructure. Designed as a framework
+                  connecting gamers, developers, and token holders.
                 </p>
-                <p class="dapp-feature">
-                  <span class="highlight-text">GORBOY Labs</span> - Tools,
-                  generators, mini-widgets and add-ons for your gorb token
-                </p>
-                <p class="dapp-feature">
-                  Treats the blockchain as a living organism
-                </p>
-              </div>
-              <div class="dapp-links">
-                <a href="https://gorboy.com/" target="_blank" class="dapp-link">
-                  <span class="dapp-link-text">VISIT SITE</span>
-                  <img src="images/arrow_outward.svg" alt="" />
-                </a>
-                <a
-                  href="https://x.com/GORBOY_OFFICIAL"
-                  target="_blank"
-                  class="dapp-link dapp-social"
-                >
-                  <span class="dapp-link-text">@GORBOY_OFFICIAL</span>
-                </a>
-              </div>
+                <div class="dapp-features">
+                  <p class="dapp-feature">
+                    <span class="highlight-text">Guard Terminal (GGT)</span> -
+                    Visualize any token as energy fields (science bitch!)
+                  </p>
+                  <p class="dapp-feature">
+                    <span class="highlight-text">GORBOY Labs</span> - Tools,
+                    generators, mini-widgets and add-ons for your gorb token
+                  </p>
+                  <p class="dapp-feature">
+                    Treats the blockchain as a living organism
+                  </p>
+                </div>
+                <div class="dapp-links">
+                  <a
+                    href="https://gorboy.com/"
+                    target="_blank"
+                    class="dapp-link"
+                  >
+                    <span class="dapp-link-text">VISIT SITE</span>
+                    <img src="images/arrow_outward.svg" alt="" />
+                  </a>
+                  <a
+                    href="https://x.com/GORBOY_OFFICIAL"
+                    target="_blank"
+                    class="dapp-link dapp-social"
+                  >
+                    <span class="dapp-link-text">@GORBOY_OFFICIAL</span>
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -777,51 +832,56 @@
             <div class="dapp-card" data-dapp="9">
               <span class="dapp-number">09</span>
               <div class="dapp-image-wrapper">
-                <img src="images/trashbot.png" alt="Trash Bot" class="dapp-image" loading="lazy" />
+                <img
+                  src="images/trashbot.png"
+                  alt="Trash Bot"
+                  class="dapp-image"
+                  loading="lazy"
+                />
               </div>
               <div class="dapp-content">
                 <div class="dapp-header">
                   <div>
                     <h2 class="dapp-title">Trash Bot</h2>
-                  <p class="dapp-tagline">Telegram bot hub for degens</p>
+                    <p class="dapp-tagline">Telegram bot hub for degens</p>
+                  </div>
                 </div>
-              </div>
-              <p class="dapp-description">
-                The telegram bot hub for Gorbagana degens. Multiple bots for
-                different needs.
-              </p>
-              <div class="dapp-features">
-                <p class="dapp-feature">
-                  <span class="highlight-text">TrashGuard Bot</span> - Create
-                  live portals in Telegram with token info, buy activity, bridge
-                  guides
+                <p class="dapp-description">
+                  The telegram bot hub for Gorbagana degens. Multiple bots for
+                  different needs.
                 </p>
-                <p class="dapp-feature">
-                  <span class="highlight-text">TrashFun Bot</span> - Send
-                  instant tips using $GOR, $TRASHCOIN, $JUNK and more
-                </p>
-                <p class="dapp-feature">
-                  Create friendly bets between members - losers pay, winners
-                  flex
-                </p>
-              </div>
-              <div class="dapp-links">
-                <a
-                  href="https://trashbot.wtf/"
-                  target="_blank"
-                  class="dapp-link"
-                >
-                  <span class="dapp-link-text">VISIT SITE</span>
-                  <img src="images/arrow_outward.svg" alt="" />
-                </a>
-                <a
-                  href="https://x.com/fairdevs"
-                  target="_blank"
-                  class="dapp-link dapp-social"
-                >
-                  <span class="dapp-link-text">@FAIRDEVS</span>
-                </a>
-              </div>
+                <div class="dapp-features">
+                  <p class="dapp-feature">
+                    <span class="highlight-text">TrashGuard Bot</span> - Create
+                    live portals in Telegram with token info, buy activity,
+                    bridge guides
+                  </p>
+                  <p class="dapp-feature">
+                    <span class="highlight-text">TrashFun Bot</span> - Send
+                    instant tips using $GOR, $TRASHCOIN, $JUNK and more
+                  </p>
+                  <p class="dapp-feature">
+                    Create friendly bets between members - losers pay, winners
+                    flex
+                  </p>
+                </div>
+                <div class="dapp-links">
+                  <a
+                    href="https://trashbot.wtf/"
+                    target="_blank"
+                    class="dapp-link"
+                  >
+                    <span class="dapp-link-text">VISIT SITE</span>
+                    <img src="images/arrow_outward.svg" alt="" />
+                  </a>
+                  <a
+                    href="https://x.com/fairdevs"
+                    target="_blank"
+                    class="dapp-link dapp-social"
+                  >
+                    <span class="dapp-link-text">@FAIRDEVS</span>
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -829,49 +889,57 @@
             <div class="dapp-card" data-dapp="10">
               <span class="dapp-number">10</span>
               <div class="dapp-image-wrapper">
-                <img src="images/trashblazers.png" alt="TrashBlazers" class="dapp-image" loading="lazy" />
+                <img
+                  src="images/trashblazers.png"
+                  alt="TrashBlazers"
+                  class="dapp-image"
+                  loading="lazy"
+                />
               </div>
               <div class="dapp-content">
                 <div class="dapp-header">
                   <div>
                     <h2 class="dapp-title">TrashBlazers</h2>
-                  <p class="dapp-tagline">Trash is Cash</p>
+                    <p class="dapp-tagline">Trash is Cash</p>
+                  </div>
                 </div>
-              </div>
-              <p class="dapp-description">
-                Trashblazers are the trailblazers of Gorbagana. The risk-takers,
-                the believers, the ones who should benefit the most.
-              </p>
-              <div class="dapp-features">
-                <p class="dapp-feature">
-                  View all gorbagios and sGor bridged to trashnet
+                <p class="dapp-description">
+                  Trashblazers are the trailblazers of Gorbagana. The
+                  risk-takers, the believers, the ones who should benefit the
+                  most.
                 </p>
-                <p class="dapp-feature">Each bridged GOR = 0.3 TRASH</p>
-                <p class="dapp-feature">Each bridged Gorbagio = 2,000 TRASH</p>
-                <p class="dapp-feature">
-                  Top 100 or Top 40 trash holders get extra airdrops
-                </p>
-                <p class="dapp-feature">
-                  Check upcoming airdrops for trash holders
-                </p>
-              </div>
-              <div class="dapp-links">
-                <a
-                  href="https://trashblazers.com/"
-                  target="_blank"
-                  class="dapp-link"
-                >
-                  <span class="dapp-link-text">VISIT SITE</span>
-                  <img src="images/arrow_outward.svg" alt="" />
-                </a>
-                <a
-                  href="https://x.com/fairdevs"
-                  target="_blank"
-                  class="dapp-link dapp-social"
-                >
-                  <span class="dapp-link-text">@FAIRDEVS</span>
-                </a>
-              </div>
+                <div class="dapp-features">
+                  <p class="dapp-feature">
+                    View all gorbagios and sGor bridged to trashnet
+                  </p>
+                  <p class="dapp-feature">Each bridged GOR = 0.3 TRASH</p>
+                  <p class="dapp-feature">
+                    Each bridged Gorbagio = 2,000 TRASH
+                  </p>
+                  <p class="dapp-feature">
+                    Top 100 or Top 40 trash holders get extra airdrops
+                  </p>
+                  <p class="dapp-feature">
+                    Check upcoming airdrops for trash holders
+                  </p>
+                </div>
+                <div class="dapp-links">
+                  <a
+                    href="https://trashblazers.com/"
+                    target="_blank"
+                    class="dapp-link"
+                  >
+                    <span class="dapp-link-text">VISIT SITE</span>
+                    <img src="images/arrow_outward.svg" alt="" />
+                  </a>
+                  <a
+                    href="https://x.com/fairdevs"
+                    target="_blank"
+                    class="dapp-link dapp-social"
+                  >
+                    <span class="dapp-link-text">@FAIRDEVS</span>
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -879,49 +947,56 @@
             <div class="dapp-card" data-dapp="11">
               <span class="dapp-number">11</span>
               <div class="dapp-image-wrapper">
-                <img src="images/gorincenrator.png" alt="Gor Incinerator" class="dapp-image" loading="lazy" />
+                <img
+                  src="images/gorincenrator.png"
+                  alt="Gor Incinerator"
+                  class="dapp-image"
+                  loading="lazy"
+                />
               </div>
               <div class="dapp-content">
                 <div class="dapp-header">
                   <div>
                     <h2 class="dapp-title">Gor Incinerator</h2>
-                  <p class="dapp-tagline">Recover your locked rent</p>
+                    <p class="dapp-tagline">Recover your locked rent</p>
+                  </div>
                 </div>
-              </div>
-              <p class="dapp-description">
-                Close empty token accounts on the Gorbagana network and recover
-                rent that would otherwise be locked away. Connect Backpack, scan
-                for empty accounts, then burn and reclaim your GOR.
-              </p>
-              <div class="dapp-features">
-                <p class="dapp-feature">
-                  Curated blacklist ensures important token mints are protected
+                <p class="dapp-description">
+                  Close empty token accounts on the Gorbagana network and
+                  recover rent that would otherwise be locked away. Connect
+                  Backpack, scan for empty accounts, then burn and reclaim your
+                  GOR.
                 </p>
-                <p class="dapp-feature">5% service fee on recovered rent</p>
-                <p class="dapp-feature">
-                  <span class="highlight-text"
-                    >Gorbagio NFT holders pay 0% fees</span
+                <div class="dapp-features">
+                  <p class="dapp-feature">
+                    Curated blacklist ensures important token mints are
+                    protected
+                  </p>
+                  <p class="dapp-feature">5% service fee on recovered rent</p>
+                  <p class="dapp-feature">
+                    <span class="highlight-text"
+                      >Gorbagio NFT holders pay 0% fees</span
+                    >
+                    - full amount returned
+                  </p>
+                </div>
+                <div class="dapp-links">
+                  <a
+                    href="https://gor-incinerator.com/"
+                    target="_blank"
+                    class="dapp-link"
                   >
-                  - full amount returned
-                </p>
-              </div>
-              <div class="dapp-links">
-                <a
-                  href="https://gor-incinerator.com/"
-                  target="_blank"
-                  class="dapp-link"
-                >
-                  <span class="dapp-link-text">VISIT SITE</span>
-                  <img src="images/arrow_outward.svg" alt="" />
-                </a>
-                <a
-                  href="https://x.com/Gor_incinerator"
-                  target="_blank"
-                  class="dapp-link dapp-social"
-                >
-                  <span class="dapp-link-text">@GOR_INCINERATOR</span>
-                </a>
-              </div>
+                    <span class="dapp-link-text">VISIT SITE</span>
+                    <img src="images/arrow_outward.svg" alt="" />
+                  </a>
+                  <a
+                    href="https://x.com/Gor_incinerator"
+                    target="_blank"
+                    class="dapp-link dapp-social"
+                  >
+                    <span class="dapp-link-text">@GOR_INCINERATOR</span>
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -929,52 +1004,60 @@
             <div class="dapp-card" data-dapp="12">
               <span class="dapp-number">12</span>
               <div class="dapp-image-wrapper">
-                <img src="images/trashcoin.png" alt="TrashCoin" class="dapp-image" loading="lazy" />
+                <img
+                  src="images/trashcoin.png"
+                  alt="TrashCoin"
+                  class="dapp-image"
+                  loading="lazy"
+                />
               </div>
               <div class="dapp-content">
                 <div class="dapp-header">
                   <div>
                     <h2 class="dapp-title">TrashCoin</h2>
-                  <p class="dapp-tagline">A P2P Trash System</p>
+                    <p class="dapp-tagline">A P2P Trash System</p>
+                  </div>
                 </div>
-              </div>
-              <p class="dapp-description">
-                No hardware mining, no randomness. 100% guaranteed minting,
-                first come first served.
-              </p>
-              <div class="dapp-features">
-                <p class="dapp-feature">
-                  Each mint gives you a
-                  <span class="highlight-text">Trashticket</span> for the
-                  lottery
+                <p class="dapp-description">
+                  No hardware mining, no randomness. 100% guaranteed minting,
+                  first come first served.
                 </p>
-                <p class="dapp-feature">
-                  Mint a <span class="highlight-text">Trashpass</span> to join
-                  P2E program
-                </p>
-                <p class="dapp-feature">Earn $JUNK for every post you share</p>
-                <p class="dapp-feature">
-                  <span class="highlight-text">Coming soon:</span> TrashArmy -
-                  PvP trajectory shooter (Win Trashcoin or go back to the dump)
-                </p>
-              </div>
-              <div class="dapp-links">
-                <a
-                  href="https://trashcoin.wtf/"
-                  target="_blank"
-                  class="dapp-link"
-                >
-                  <span class="dapp-link-text">VISIT SITE</span>
-                  <img src="images/arrow_outward.svg" alt="" />
-                </a>
-                <a
-                  href="https://x.com/trashcoinwtf"
-                  target="_blank"
-                  class="dapp-link dapp-social"
-                >
-                  <span class="dapp-link-text">@TRASHCOINWTF</span>
-                </a>
-              </div>
+                <div class="dapp-features">
+                  <p class="dapp-feature">
+                    Each mint gives you a
+                    <span class="highlight-text">Trashticket</span> for the
+                    lottery
+                  </p>
+                  <p class="dapp-feature">
+                    Mint a <span class="highlight-text">Trashpass</span> to join
+                    P2E program
+                  </p>
+                  <p class="dapp-feature">
+                    Earn $JUNK for every post you share
+                  </p>
+                  <p class="dapp-feature">
+                    <span class="highlight-text">Coming soon:</span> TrashArmy -
+                    PvP trajectory shooter (Win Trashcoin or go back to the
+                    dump)
+                  </p>
+                </div>
+                <div class="dapp-links">
+                  <a
+                    href="https://trashcoin.wtf/"
+                    target="_blank"
+                    class="dapp-link"
+                  >
+                    <span class="dapp-link-text">VISIT SITE</span>
+                    <img src="images/arrow_outward.svg" alt="" />
+                  </a>
+                  <a
+                    href="https://x.com/trashcoinwtf"
+                    target="_blank"
+                    class="dapp-link dapp-social"
+                  >
+                    <span class="dapp-link-text">@TRASHCOINWTF</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
