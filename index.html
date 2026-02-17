@@ -62,6 +62,12 @@
         scroll-snap-align: start;
         min-height: 100vh;
       }
+      /* Remove old grid overlays if they exist */
+      .section_hero::before,
+      .section_hero::after,
+      .section_hero {
+        background-image: none !important;
+      }
     </style>
   </head>
   <body class="body">

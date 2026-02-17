@@ -536,6 +536,13 @@
 
 .gorb-logo {
   width: 3rem;
+  height: auto;
+  display: block;
+}
+
+img[src$=".svg"] {
+  max-width: 100%;
+  height: auto;
 }
 
 .gorb_logo-wrapper {
