@@ -42,8 +42,8 @@
             (n.className += t + "touch"));
       })(window, document);
     </script>
-    <link href="images/Gorbagana-G-Filled-Logo.png" rel="shortcut icon" type="image/x-icon" />
-    <link href="images/Gorbagana-G-Filled-Logo.png" rel="apple-touch-icon" />
+    <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon" />
+    <link href="images/webclip.png" rel="apple-touch-icon" />
     <style>
       /* Avoid double-smoothing with Webflow's native anchor behavior */
       html {
@@ -61,12 +61,6 @@
       .snap-section {
         scroll-snap-align: start;
         min-height: 100vh;
-      }
-      /* Remove old grid overlays if they exist */
-      .section_hero::before,
-      .section_hero::after,
-      .section_hero {
-        background-image: none !important;
       }
     </style>
   </head>
@@ -88,7 +82,7 @@
               aria-current="page"
               class="gorb_logo-wrapper w-nav-brand w--current"
               ><img
-                src="images/Gorbagana-Wordmark.png"
+                src="images/gorb-logo.avif"
                 loading="lazy"
                 alt=""
                 class="gorb-logo"
@@ -112,6 +106,9 @@
               target="_blank"
               class="navbar_text-link w-nav-link"
               >Docs</a
+            >
+            <a href="brand-guidelines/index.html" class="navbar_text-link w-nav-link"
+              >Brand Guidelines</a
             >
           </div>
         </div>
@@ -509,7 +506,7 @@
                 </div>
                 <div class="gorb_logo-wrapper">
                   <img
-                    src="images/Gorbagana-Wordmark.png"
+                    src="images/gorb-logo.avif"
                     loading="lazy"
                     alt=""
                     class="gorb-logo"

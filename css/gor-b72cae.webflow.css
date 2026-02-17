@@ -33,11 +33,6 @@
 
 .body {
   background-color: #141b0f;
-  background-image: 
-    linear-gradient(rgba(85, 222, 74, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(85, 222, 74, 0.05) 1px, transparent 1px);
-  background-size: 40px 40px;
-  background-attachment: fixed;
 }
 
 .page-wrapper {
@@ -536,13 +531,6 @@
 
 .gorb-logo {
   width: 3rem;
-  height: auto;
-  display: block;
-}
-
-img[src$=".svg"] {
-  max-width: 100%;
-  height: auto;
 }
 
 .gorb_logo-wrapper {
