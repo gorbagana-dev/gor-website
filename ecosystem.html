@@ -31,7 +31,7 @@
     <link href="images/webclip.png" rel="apple-touch-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <style>
       html {
         scroll-behavior: auto !important;
@@ -46,6 +46,7 @@
         align-items: center;
         padding-top: 8rem;
         position: relative;
+        border-bottom: 1px solid var(--border);
       }
 
       .ecosystem-hero_content {
@@ -55,8 +56,8 @@
       }
 
       .ecosystem-intro {
-        color: #899381;
-        font-family: "Space Grotesk", Arial, sans-serif;
+        color: var(--fg-muted);
+        font-family: var(--font-body);
         font-size: 1.25rem;
         line-height: 150%;
         margin-top: 1.5rem;
@@ -70,22 +71,23 @@
       }
 
       .dapp-card {
-        background-color: rgba(198, 222, 178, 0.1);
-        border-radius: 1.5rem;
+        background-color: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-sm);
         padding: 2.5rem;
         margin-bottom: 3rem;
         position: relative;
         overflow: hidden;
         opacity: 0;
         transform: translateY(60px);
-        transition: box-shadow 0.3s ease;
+        transition: border-color 0.2s ease;
         display: flex;
         gap: 2.5rem;
         align-items: center;
       }
 
       .dapp-card:hover {
-        box-shadow: 0 0 40px rgba(125, 184, 107, 0.15);
+        border-color: var(--border-hover);
       }
 
       .dapp-card.is-visible {
@@ -97,8 +99,9 @@
         flex-shrink: 0;
         width: 320px;
         height: 320px;
-        border-radius: 1rem;
+        border-radius: var(--radius-sm);
         overflow: hidden;
+        border: 1px solid var(--border);
       }
 
       .dapp-image {
@@ -127,24 +130,25 @@
       }
 
       .dapp-title {
-        color: #c6deb2;
-        font-family: "Staatliches", Arial, sans-serif;
+        color: var(--fg);
+        font-family: var(--font-display);
         font-size: 3.75rem;
         line-height: 80%;
         letter-spacing: -0.05rem;
         margin: 0;
+        text-transform: uppercase;
       }
 
       .dapp-tagline {
-        color: #c6deb2;
-        font-family: "Space Grotesk", Arial, sans-serif;
+        color: var(--fg);
+        font-family: var(--font-body);
         font-size: 1rem;
         margin-top: 0.5rem;
       }
 
       .dapp-description {
-        color: #899381;
-        font-family: "Space Grotesk", Arial, sans-serif;
+        color: var(--fg-muted);
+        font-family: var(--font-body);
         font-size: 1.125rem;
         line-height: 160%;
         margin-bottom: 1.5rem;
@@ -156,11 +160,12 @@
         grid-template-columns: 1fr 1fr;
         gap: 0 2rem;
         column-gap: 2rem;
+        align-items: center;
       }
 
       .dapp-feature {
-        color: #c6deb2;
-        font-family: "Space Grotesk", Arial, sans-serif;
+        color: var(--fg);
+        font-family: var(--font-body);
         font-size: 1rem;
         line-height: 180%;
         padding-left: 1.5rem;
@@ -175,7 +180,7 @@
         top: 0.5rem;
         width: 6px;
         height: 6px;
-        background-color: #7db86b;
+        background-color: var(--primary);
         border-radius: 50%;
       }
 
@@ -187,59 +192,65 @@
       }
 
       .dapp-link {
-        background-color: #141b0f;
-        border-radius: 10000px;
+        background-color: var(--primary);
+        border: 1px solid transparent;
+        border-radius: var(--radius-sm);
         padding: 0.75rem 1.5rem;
         text-decoration: none;
         display: inline-flex;
         align-items: center;
         gap: 0.5rem;
-        transition: all 0.2s ease;
+        transition: opacity 0.2s ease;
       }
 
       .dapp-link:hover {
-        background-color: #7db86b;
+        opacity: 0.9;
       }
 
       .dapp-link:hover .dapp-link-text {
-        color: #0c0c0e;
+        color: var(--primary-fg);
       }
 
       .dapp-link-text {
-        color: #c6deb2;
-        font-family: "Staatliches", Arial, sans-serif;
-        font-size: 1.25rem;
+        color: var(--primary-fg);
+        font-family: var(--font-body);
+        font-size: 0.875rem;
+        font-weight: 600;
         line-height: 1;
         transition: color 0.2s ease;
       }
 
       .dapp-social {
-        background-color: transparent;
-        border: 1px solid rgba(198, 222, 178, 0.2);
+        background-color: var(--surface);
+        border: 1px solid var(--border);
       }
 
       .dapp-social:hover {
-        background-color: rgba(198, 222, 178, 0.1);
-        border-color: #c6deb2;
+        border-color: var(--primary);
+        opacity: 1;
+      }
+
+      .dapp-social .dapp-link-text {
+        color: var(--fg);
       }
 
       .dapp-social:hover .dapp-link-text {
-        color: #c6deb2;
+        color: var(--primary);
       }
 
       .dapp-number {
         position: absolute;
         top: 1.5rem;
         right: 2rem;
-        color: rgba(198, 222, 178, 0.1);
-        font-family: "Staatliches", Arial, sans-serif;
+        color: rgba(240, 239, 232, 0.06);
+        font-family: var(--font-display);
         font-size: 8rem;
         line-height: 1;
         pointer-events: none;
       }
 
       .highlight-text {
-        color: #7db86b;
+        color: var(--primary);
       }
 
       .section-divider {
@@ -247,7 +258,7 @@
         background: linear-gradient(
           90deg,
           transparent,
-          rgba(198, 222, 178, 0.2),
+          var(--border),
           transparent
         );
         margin: 4rem 0;
@@ -256,24 +267,22 @@
       .cta-section {
         text-align: center;
         padding: 6rem 5%;
-        background: linear-gradient(
-          180deg,
-          transparent,
-          rgba(125, 184, 107, 0.05)
-        );
+        background: var(--surface);
+        border-top: 1px solid var(--border);
       }
 
       .cta-title {
-        color: #c6deb2;
-        font-family: "Staatliches", Arial, sans-serif;
+        color: var(--fg);
+        font-family: var(--font-display);
         font-size: 4rem;
         line-height: 90%;
         margin-bottom: 1.5rem;
+        text-transform: uppercase;
       }
 
       .cta-text {
-        color: #899381;
-        font-family: "Space Grotesk", Arial, sans-serif;
+        color: var(--fg-muted);
+        font-family: var(--font-body);
         font-size: 1.25rem;
         margin-bottom: 2rem;
       }
@@ -411,13 +420,13 @@
         <!-- Dapps Section -->
         <div class="dapps-section">
           <div class="container-medium">
-            <!-- Bang -->
+            <!-- Dumpster -->
             <div class="dapp-card" data-dapp="1">
               <span class="dapp-number">01</span>
               <div class="dapp-image-wrapper">
                 <img
-                  src="images/bang.png"
-                  alt="Bang"
+                  src="images/dumpster.png"
+                  alt="Dumpster"
                   class="dapp-image"
                   loading="lazy"
                 />
@@ -425,46 +434,41 @@
               <div class="dapp-content">
                 <div class="dapp-header">
                   <div>
-                    <h2 class="dapp-title">Bang</h2>
-                    <p class="dapp-tagline">Own a piece of the money machine</p>
+                    <h2 class="dapp-title">Dumpster</h2>
+                    <p class="dapp-tagline">Official token launchpad on Gorbagana</p>
                   </div>
                 </div>
                 <p class="dapp-description">
-                  What if you could own a piece of a Pump.fun-style money
-                  machine without dumping on your friends? Bang lets you profit
-                  ethically with
-                  <span class="highlight-text">100% fair launch</span> - no
-                  investors, no team allocation, no insiders.
+                  Launch a token in under 10 seconds with instant on-curve
+                  liquidity. Dumpster runs a
+                  <span class="highlight-text">bonding-curve launchpad</span>
+                  where price rises as people buy and falls as they sell - no
+                  creator backdoors, no special privileges, no allocations.
                 </p>
                 <div class="dapp-features">
                   <p class="dapp-feature">
-                    <span class="highlight-text">100% revenue</span> flows to
-                    $BANG stakers after the last token is mined
+                    <span class="highlight-text">Free token creation</span> -
+                    launch in under 10 seconds
                   </p>
                   <p class="dapp-feature">
-                    <span class="highlight-text">Royalty tokens</span> - earn
-                    fees on every transfer without dumping on your community
+                    Bonding-curve pricing with instant buy/sell against the
+                    curve - no waiting on liquidity
                   </p>
                   <p class="dapp-feature">
-                    Create a banger (raises 1M GOR) and earn
-                    <span class="highlight-text">100,000 GOR</span> bonus
+                    <span class="highlight-text">Max 1.25% total fees</span>
                   </p>
                   <p class="dapp-feature">
-                    Trade to mine $BANG - 10 GOR volume = 1 BANG, distributed
-                    weekly
+                    Automatic graduation to an AMM pool when the curve fills
                   </p>
                   <p class="dapp-feature">
-                    <span class="highlight-text">One-way staking</span> - tokens
-                    burned forever, circulating supply only goes down
-                  </p>
-                  <p class="dapp-feature">
-                    Tiered algorithm ensures every token gets featured on the
-                    main page
+                    LP tokens
+                    <span class="highlight-text">permanently locked</span>
+                    after graduation
                   </p>
                 </div>
                 <div class="dapp-links">
                   <a
-                    href="https://bang.meme/"
+                    href="https://dumpster.cash/"
                     target="_blank"
                     class="dapp-link"
                   >
@@ -472,11 +476,19 @@
                     <img src="images/arrow_outward.svg" alt="" />
                   </a>
                   <a
-                    href="https://x.com/fairdevs"
+                    href="https://docs.dumpster.cash/"
+                    target="_blank"
+                    class="dapp-link"
+                  >
+                    <span class="dapp-link-text">DOCS</span>
+                    <img src="images/arrow_outward.svg" alt="" />
+                  </a>
+                  <a
+                    href="https://x.com/dumpstercash"
                     target="_blank"
                     class="dapp-link dapp-social"
                   >
-                    <span class="dapp-link-text">@FAIRDEVS</span>
+                    <span class="dapp-link-text">@DUMPSTERCASH</span>
                   </a>
                 </div>
               </div>
@@ -613,69 +625,6 @@
               </div>
             </div>
 
-            <!-- Trash Bin -->
-            <div class="dapp-card" data-dapp="4">
-              <span class="dapp-number">04</span>
-              <div class="dapp-image-wrapper">
-                <img
-                  src="images/trashbin.png"
-                  alt="Trash Bin"
-                  class="dapp-image"
-                  loading="lazy"
-                />
-              </div>
-              <div class="dapp-content">
-                <div class="dapp-header">
-                  <div>
-                    <h2 class="dapp-title">Trash Bin</h2>
-                    <p class="dapp-tagline">Gorb's very own trashy DEX</p>
-                  </div>
-                </div>
-                <p class="dapp-description">
-                  Swap trash, get trash. Apart from your standard CPAMM, delve
-                  into junk-fueled market makers.
-                </p>
-                <div class="dapp-features">
-                  <p class="dapp-feature">
-                    <span class="highlight-text">SAMM</span> (Stink Ass Market
-                    Maker) - Similar to CLMM; More degen trades, more trashy
-                    pools
-                  </p>
-                  <p class="dapp-feature">
-                    <span class="highlight-text">TRAP</span> (Trash Swap) -
-                    Fetches all pools and routes trades for best price with
-                    lowest risk
-                  </p>
-                  <p class="dapp-feature">
-                    <span class="highlight-text">TrashBin Station</span> - Token
-                    management room (checkout Degen Mode if you're a true
-                    dumpster diver)
-                  </p>
-                  <p class="dapp-feature">
-                    <span class="highlight-text">BinBoard</span> - All trashy
-                    tokens ranked by TVL + MCAP with liquidity-adjusted checks
-                  </p>
-                </div>
-                <div class="dapp-links">
-                  <a
-                    href="https://trashbin.fun/"
-                    target="_blank"
-                    class="dapp-link"
-                  >
-                    <span class="dapp-link-text">VISIT SITE</span>
-                    <img src="images/arrow_outward.svg" alt="" />
-                  </a>
-                  <a
-                    href="https://x.com/TrashBinGOR"
-                    target="_blank"
-                    class="dapp-link dapp-social"
-                  >
-                    <span class="dapp-link-text">@TRASHBINGOR</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-
             <!-- GorID -->
             <div class="dapp-card" data-dapp="5">
               <span class="dapp-number">05</span>
@@ -772,13 +721,13 @@
               </div>
             </div>
 
-            <!-- Trash Scan -->
+            <!-- Explorer -->
             <div class="dapp-card" data-dapp="7">
               <span class="dapp-number">07</span>
               <div class="dapp-image-wrapper">
                 <img
                   src="images/trashscan.png"
-                  alt="Trash Scan"
+                  alt="Explorer"
                   class="dapp-image"
                   loading="lazy"
                 />
@@ -786,7 +735,7 @@
               <div class="dapp-content">
                 <div class="dapp-header">
                   <div>
-                    <h2 class="dapp-title">Trash Scan</h2>
+                    <h2 class="dapp-title">Explorer</h2>
                     <p class="dapp-tagline">
                       The leading explorer for Gorbagana
                     </p>
