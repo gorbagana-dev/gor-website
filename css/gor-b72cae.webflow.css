@@ -1,3 +1,20 @@
+:root {
+  --bg: #050505;
+  --fg: #F0EFE8;
+  --fg-muted: rgba(240, 239, 232, 0.55);
+  --fg-subtle: rgba(240, 239, 232, 0.35);
+  --primary: #4DFF91;
+  --primary-fg: #050505;
+  --border: rgba(240, 239, 232, 0.08);
+  --border-hover: rgba(240, 239, 232, 0.14);
+  --surface: rgba(240, 239, 232, 0.02);
+  --radius-sm: 6px;
+  --radius-none: 0px;
+  --font-display: "Bebas Neue", Staatliches, Arial, sans-serif;
+  --font-body: Outfit, ui-sans-serif, system-ui, sans-serif;
+  --font-mono: Ibmplexmono, "IBM Plex Mono", ui-monospace, monospace;
+}
+
 @font-face {
   font-family: Staatliches;
   src: url('../fonts/Staatliches-Regular.ttf') format("truetype");
@@ -32,11 +49,15 @@
 }
 
 .body {
-  background-color: #141b0f;
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
 }
 
 .page-wrapper {
   overflow: hidden;
+  position: relative;
+  z-index: 1;
 }
 
 .section_hero {
@@ -85,14 +106,15 @@
 }
 
 .h1 {
-  color: #c6deb2;
+  color: var(--fg);
   letter-spacing: -.1rem;
   margin-top: 0;
   margin-bottom: 0;
-  font-family: Staatliches, Arial, sans-serif;
+  font-family: var(--font-display);
   font-size: 8.75rem;
   font-weight: 400;
   line-height: 80%;
+  text-transform: uppercase;
 }
 
 .h1.text-align-center {
@@ -101,12 +123,13 @@
 }
 
 .overline {
-  color: #555f4c;
+  color: var(--fg-subtle);
   text-transform: uppercase;
   margin-bottom: 0;
-  font-family: Ibmplexmono, Arial, sans-serif;
+  font-family: var(--font-mono);
   font-size: 1.25rem;
   line-height: 100%;
+  letter-spacing: 1.5px;
 }
 
 .overline.text-align-center {
@@ -116,10 +139,10 @@
 }
 
 .text-size-medium {
-  color: #899381;
+  color: var(--fg-muted);
   letter-spacing: -.02rem;
   margin-bottom: 0;
-  font-family: Inter Variablefont Opsz Wght, Arial, sans-serif;
+  font-family: var(--font-body);
   font-size: 1.125rem;
   font-weight: 500;
   line-height: 120%;
@@ -136,19 +159,31 @@
 }
 
 .button-primary {
-  background-color: #55de4a;
-  border-radius: 10000px;
+  background-color: var(--primary);
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
   padding: .75rem 1.5rem .875rem;
   text-decoration: none;
   display: inline-block;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.button-primary:hover {
+  opacity: 0.9;
 }
 
 .button-secondary {
-  background-color: #c6deb2;
-  border-radius: 1000px;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
   padding: .75rem 1.5rem .875rem;
   text-decoration: none;
   display: inline-block;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.button-secondary:hover {
+  border-color: var(--primary);
 }
 
 .buttons-container {
@@ -187,8 +222,9 @@
 .explore-card {
   grid-column-gap: 8rem;
   grid-row-gap: 8rem;
-  background-color: #c6deb21a;
-  border-radius: 1.5rem;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
   flex-flow: column;
   justify-content: space-between;
   align-items: stretch;
@@ -196,11 +232,17 @@
   display: flex;
   position: relative;
   overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.explore-card:hover {
+  border-color: var(--border-hover);
 }
 
 .explore-card.size-large {
-  background-color: #c6deb200;
-  border: .125rem solid #c6deb21a;
+  background-color: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
   justify-content: flex-start;
   align-items: center;
   padding-top: 5.25rem;
@@ -209,14 +251,15 @@
 }
 
 .h3 {
-  color: #c6deb2;
+  color: var(--fg);
   letter-spacing: -.05rem;
   margin-top: 0;
   margin-bottom: 0;
-  font-family: Staatliches, Arial, sans-serif;
+  font-family: var(--font-display);
   font-size: 3.75rem;
   font-weight: 400;
   line-height: 80%;
+  text-transform: uppercase;
 }
 
 .h3.text-align-center {
@@ -224,21 +267,21 @@
 }
 
 .text-size-large {
-  color: #c6deb2;
+  color: var(--fg);
   letter-spacing: -.02rem;
   margin-bottom: 0;
-  font-family: Inter Variablefont Opsz Wght, Arial, sans-serif;
+  font-family: var(--font-body);
   font-size: 1.25rem;
   font-weight: 500;
   line-height: 120%;
 }
 
 .text-size-large.color-is-grey {
-  color: #899381;
+  color: var(--fg-muted);
 }
 
 .text-size-large.color-is-grey.dark {
-  color: #555f4c;
+  color: var(--fg-subtle);
 }
 
 .explore-card_header-wrapper {
@@ -249,25 +292,32 @@
 }
 
 .button-tertiary {
-  background-color: #141b0f;
-  border-radius: 10000px;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
   padding: .75rem 1.5rem .875rem;
   text-decoration: none;
   display: inline-block;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.button-tertiary:hover {
+  border-color: var(--primary);
 }
 
 .text-button-tertiary {
-  color: #c6deb2;
-  letter-spacing: 0;
+  color: var(--fg);
   margin-bottom: 0;
-  font-family: Staatliches, Arial, sans-serif;
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
   line-height: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
 
 .text-button-tertiary.is-black {
-  color: #0c0c0e;
+  color: var(--primary-fg);
 }
 
 .explore-card_title-wrapper {
@@ -279,13 +329,17 @@
 }
 
 .text-button-primary {
-  color: #0c0c0e;
+  color: var(--primary-fg);
   letter-spacing: -.02rem;
   margin-bottom: 0;
-  font-family: Inter Variablefont Opsz Wght, Arial, sans-serif;
+  font-family: var(--font-body);
   font-size: 1.125rem;
   font-weight: 600;
   line-height: 100%;
+}
+
+.button-secondary .text-button-primary {
+  color: var(--fg);
 }
 
 .gorbagio-bin {
@@ -324,8 +378,9 @@
 .what-card {
   grid-column-gap: 8rem;
   grid-row-gap: 8rem;
-  background-color: #c6deb21a;
-  border-radius: 1.5rem;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
   flex-flow: column;
   justify-content: space-between;
   align-items: stretch;
@@ -333,11 +388,17 @@
   display: flex;
   position: relative;
   overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.what-card:hover {
+  border-color: var(--border-hover);
 }
 
 .what-card.size-large {
-  background-color: #c6deb200;
-  border: .125rem solid #c6deb21a;
+  background-color: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
   justify-content: flex-start;
   align-items: center;
   padding-top: 5.25rem;
@@ -355,13 +416,19 @@
 .button-icon {
   grid-column-gap: .5rem;
   grid-row-gap: .5rem;
-  background-color: #c6deb21a;
-  border-radius: 10000px;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
   justify-content: flex-start;
   align-items: center;
   padding: .125rem 1rem .125rem .125rem;
   text-decoration: none;
   display: flex;
+  transition: border-color 0.2s ease;
+}
+
+.button-icon:hover {
+  border-color: var(--border-hover);
 }
 
 .icon-button {
@@ -386,11 +453,12 @@
 }
 
 .text-display {
-  color: #c6deb2;
+  color: var(--fg);
   letter-spacing: -.2rem;
-  font-family: Staatliches, Arial, sans-serif;
+  font-family: var(--font-display);
   font-size: 18.125rem;
   line-height: 80%;
+  text-transform: uppercase;
 }
 
 .text-display.text-align-center {
@@ -409,10 +477,10 @@
 }
 
 .text-size-medium-copy {
-  color: #899381;
+  color: var(--fg-muted);
   letter-spacing: -.02rem;
   margin-bottom: 0;
-  font-family: Inter Variablefont Opsz Wght, Arial, sans-serif;
+  font-family: var(--font-body);
   font-size: 1.125rem;
   font-weight: 500;
   line-height: 120%;
@@ -431,13 +499,19 @@
 .button-large {
   grid-column-gap: .5rem;
   grid-row-gap: .5rem;
-  background-color: #c6deb21a;
-  border-radius: 10000px;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
   justify-content: space-between;
   align-items: center;
   padding: .125rem 1rem .125rem .125rem;
   text-decoration: none;
   display: flex;
+  transition: border-color 0.2s ease;
+}
+
+.button-large:hover {
+  border-color: var(--border-hover);
 }
 
 .button_left-wrapper {
@@ -483,14 +557,17 @@
 }
 
 .divider {
-  color: #3330;
-  border: 1px dashed #2a3224;
+  color: transparent;
+  border: 0;
   height: 1px;
+  position: relative;
+  background: var(--border);
+  overflow: visible;
 }
 
 .tag {
-  background-color: #86a76a;
-  border-radius: 1000px;
+  background-color: var(--primary);
+  border-radius: var(--radius-sm);
   justify-content: flex-start;
   align-items: center;
   height: 2rem;
@@ -500,13 +577,14 @@
 }
 
 .h2 {
-  color: #c6deb2;
+  color: var(--fg);
   letter-spacing: -.05rem;
   margin-top: 0;
   margin-bottom: 0;
-  font-family: Staatliches, Arial, sans-serif;
+  font-family: var(--font-display);
   font-size: 5.625rem;
   line-height: 80%;
+  text-transform: uppercase;
 }
 
 .h2.text-align-center {
@@ -548,6 +626,17 @@
   display: flex;
 }
 
+.gorb_logo-wrapper p {
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-weight: 600;
+}
+
+.footer {
+  position: relative;
+  border-top: 1px solid var(--border);
+}
+
 .nav_scroll {
   z-index: 100;
   width: 100%;
@@ -556,40 +645,51 @@
 }
 
 .navbar {
-  background-color: #ddd0;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  background-color: transparent;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .navbar_container {
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  background-color: #c6deb21a;
-  border-radius: 500px;
+  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
+  background-color: rgba(5, 5, 5, 0.6);
+  border-bottom: 1px solid var(--border);
+  border-radius: 0;
   flex-flow: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  max-width: 800px;
-  padding: 2px 32px 2px 2px;
+  max-width: none;
+  width: 100%;
+  height: 78px;
+  padding: 0 2.5rem;
   display: flex;
+  position: relative;
 }
 
 .navbar_text-link {
-  color: #c6deb2;
+  color: rgba(240, 239, 232, 0.4);
   letter-spacing: -.02px;
   padding: 0;
-  font-family: Inter Variablefont Opsz Wght, Arial, sans-serif;
-  font-size: 16px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
   line-height: 18px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.navbar_text-link:hover {
+  color: var(--fg);
 }
 
 .navbar_text-link.w--current {
-  color: #c6deb2;
+  color: var(--fg);
   text-decoration: none;
 }
 
 .navbar_text-link.w--current:hover {
-  color: #fff;
+  color: var(--fg);
 }
 
 .oscargor-hero_image {
@@ -602,6 +702,98 @@
 .sticky-section-explore {
   position: static;
   inset: 0% 0% auto;
+}
+
+.section_what,
+.section_build {
+  position: relative;
+  border-top: 1px solid var(--border);
+}
+
+.section_experiment {
+  position: relative;
+  border-top: 1px solid var(--border);
+}
+
+.section_explore {
+  position: relative;
+  border-top: 1px solid var(--border);
+}
+
+.ecosystem-hero,
+.cta-section {
+  position: relative;
+}
+
+.section_hero .gor-beams {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  opacity: 0.9;
+}
+
+.section_hero .padding-global {
+  position: relative;
+  z-index: 1;
+}
+
+.section_hero .oscargor-hero_image {
+  z-index: 5;
+}
+
+.gor-beams-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.gor-beams-track path {
+  stroke: rgba(240, 239, 232, 0.08);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+  fill: none;
+}
+
+.gor-beam-pulse-line {
+  stroke: url(#gor-beam-grad);
+  stroke-width: 1;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+  fill: none;
+  /* paths are normalized via pathLength="1000" */
+  stroke-dasharray: 320 3000;
+  stroke-dashoffset: 320;
+  animation-name: gor-beam-travel;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+@keyframes gor-beam-travel {
+  from {
+    stroke-dashoffset: 320;
+  }
+
+  to {
+    stroke-dashoffset: -1320;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gor-beam-pulse-line {
+    animation: none !important;
+    opacity: 0;
+  }
+}
+
+.gorb_logo-wrapper .text-button-tertiary {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0;
 }
 
 @media screen and (min-width: 1440px) {
@@ -822,7 +1014,7 @@
   .navbar {
     justify-content: center;
     align-items: center;
-    padding: 12px;
+    padding: 0;
     display: flex;
   }
 
@@ -831,8 +1023,9 @@
     grid-row-gap: 0px;
     justify-content: space-between;
     align-items: center;
-    padding-right: 24px;
-    display: inline-flex;
+    padding: 0 1.5rem;
+    height: 64px;
+    display: flex;
   }
 
   .navbar_text-link {

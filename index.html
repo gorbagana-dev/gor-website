@@ -29,6 +29,9 @@
     <meta content="summary_large_image" name="twitter:card" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta content="Webflow" name="generator" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link href="css/normalize.css" rel="stylesheet" type="text/css" />
     <link href="css/webflow.css" rel="stylesheet" type="text/css" />
     <link href="css/gor-b72cae.webflow.css" rel="stylesheet" type="text/css" />
@@ -112,6 +115,40 @@
       </div>
       <div class="main-wrapper">
         <div class="section_hero snap-section">
+          <div class="gor-beams" aria-hidden="true">
+            <svg
+              class="gor-beams-svg"
+              viewBox="0 0 1440 900"
+              preserveAspectRatio="xMidYMid slice"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <defs>
+                <linearGradient
+                  id="gor-beam-grad"
+                  gradientUnits="userSpaceOnUse"
+                  x1="0"
+                  y1="0"
+                  x2="1440"
+                  y2="0"
+                >
+                  <stop offset="0%" stop-color="#4DFF91" stop-opacity="0" />
+                  <stop offset="15%" stop-color="#4DFF91" stop-opacity="0.95" />
+                  <stop offset="85%" stop-color="#4DFF91" stop-opacity="0.95" />
+                  <stop offset="100%" stop-color="#4DFF91" stop-opacity="0" />
+                </linearGradient>
+                <filter id="gor-beam-glow" x="-10%" y="-200%" width="120%" height="500%">
+                  <feGaussianBlur stdDeviation="1.4" result="blur" />
+                  <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+              <g class="gor-beams-track"></g>
+              <g class="gor-beams-pulse" filter="url(#gor-beam-glow)"></g>
+            </svg>
+          </div>
           <div class="padding-global padding-section-large is-hero-section">
             <div class="container-medium is-hero">
               <div class="hero_content-wrapper">
@@ -525,6 +562,56 @@
     <script src="js/webflow.js" type="text/javascript"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
+        (function initHeroBeams() {
+          var hero = document.querySelector(".section_hero");
+          if (!hero) return;
+          var track = hero.querySelector(".gor-beams-track");
+          var pulse = hero.querySelector(".gor-beams-pulse");
+          if (!track || !pulse) return;
+
+          var lineCount = 11;
+          var topPad = 40;
+          var bottomPad = 40;
+          var availableHeight = 900 - topPad - bottomPad;
+          var spacing = availableHeight / (lineCount - 1);
+          var leftX = -200;
+          var rightX = 1640;
+          var amp = 210;
+          // Pulses travel L→R. Positive delays so nothing is visible on initial load.
+          var durations = [6.4, 7.8, 5.9, 7.1, 6.7, 8.0, 5.5, 7.4, 6.1, 7.9, 6.5];
+          var delays = [3.1, 0.9, 5.2, 1.8, 4.3, 2.5, 6.0, 1.2, 4.9, 3.6, 2.0];
+
+          for (var i = 0; i < lineCount; i++) {
+            var y = topPad + i * spacing;
+            // S-curve: starts at y, dips up by amp at first control,
+            // dips down by amp at second control, ends at y.
+            // All beams are translated copies → parallel, no collisions.
+            var d =
+              "M " + leftX + " " + y.toFixed(1) +
+              " C " + (leftX + 540) + " " + (y - amp).toFixed(1) +
+              ", " + (rightX - 540) + " " + (y + amp).toFixed(1) +
+              ", " + rightX + " " + y.toFixed(1);
+
+            var trackPath = document.createElementNS(
+              "http://www.w3.org/2000/svg",
+              "path",
+            );
+            trackPath.setAttribute("d", d);
+            track.appendChild(trackPath);
+
+            var pulsePath = document.createElementNS(
+              "http://www.w3.org/2000/svg",
+              "path",
+            );
+            pulsePath.setAttribute("d", d);
+            pulsePath.setAttribute("pathLength", "1000");
+            pulsePath.setAttribute("class", "gor-beam-pulse-line");
+            pulsePath.style.animationDuration = durations[i] + "s";
+            pulsePath.style.animationDelay = delays[i] + "s";
+            pulse.appendChild(pulsePath);
+          }
+        })();
+
         // Copy helper with fallback for older browsers / Safari
         function copyText(text) {
           if (navigator.clipboard && window.isSecureContext) {
@@ -556,11 +643,12 @@
               bottom: "16px",
               transform: "translateX(-50%)",
               padding: "8px 12px",
-              background: "rgba(134,167,106,1)",
-              color: "#0C0C0E",
-              borderRadius: "8px",
-              fontFamily: "Staatliches, Arial, sans-serif",
-              fontSize: "1.5rem",
+              background: "#4DFF91",
+              color: "#050505",
+              borderRadius: "6px",
+              fontFamily: "Outfit, ui-sans-serif, system-ui, sans-serif",
+              fontSize: "0.875rem",
+              fontWeight: "600",
               zIndex: 9999,
               opacity: "0",
               transition: "opacity .2s ease",
